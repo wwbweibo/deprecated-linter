@@ -16,7 +16,7 @@ var Analyzer = &analysis.Analyzer{
 }
 
 func run(pass *analysis.Pass) (interface{}, error) {
-	currentVersion := os.Getenv("VERSION")
+	currentVersion := getCurrentVersion()
 	inspect := func(node ast.Node) bool {
 		file, ok := node.(*ast.File)
 		if !ok {

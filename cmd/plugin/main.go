@@ -1,7 +1,7 @@
 package main
 
 import (
-	linter "deprecatedlinter"
+	linter "github.com/wwbweibo/deprecatedlinter"
 	a "golang.org/x/tools/go/analysis"
 )
 

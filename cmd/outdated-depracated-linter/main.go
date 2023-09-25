@@ -1,7 +1,7 @@
 package main
 
 import (
-	linter "deprecatedlinter"
+	linter "github.com/wwbweibo/deprecatedlinter"
 	"golang.org/x/tools/go/analysis/singlechecker"
 )
 

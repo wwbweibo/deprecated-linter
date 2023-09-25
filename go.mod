@@ -1,4 +1,4 @@
-module deprecatedlinter
+module github.com/wwbweibo/deprecatedlinter
 
 go 1.20
 
