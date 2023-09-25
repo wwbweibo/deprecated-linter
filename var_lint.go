@@ -14,7 +14,13 @@ func lintVar(gen *ast.GenDecl, pass analysis.Pass, currentVersion string) {
 		return
 	}
 	for _, v := range gen.Specs {
-		vv := v.(*ast.ValueSpec)
+		vv, ok := v.(*ast.ValueSpec)
+		if !ok {
+			return
+		}
+		if vv.Doc == nil {
+			return
+		}
 		for _, c := range vv.Doc.List {
 			commonLint(vv.Pos(), pass, vv.Names[0].Name, c.Text, currentVersion)
 		}
